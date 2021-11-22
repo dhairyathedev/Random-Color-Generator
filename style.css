@@ -9,3 +9,7 @@
     mix-blend-mode: difference;
     cursor: pointer;
 }
+.credit{
+    mix-blend-mode: difference;
+    font-weight: 900;
+}

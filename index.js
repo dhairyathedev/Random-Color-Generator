@@ -1,4 +1,5 @@
-
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+import copyTextToClipboard from 'https://cdn.skypack.dev/copy-text-to-clipboard';
 let color
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -8,6 +9,9 @@ function getRandomColor() {
     }
     document.getElementById('color').innerText = color
     document.body.style.backgroundColor = color
+    copyTextToClipboard(color)
+    confetti()
+
 }
-document.body.addEventListener('click', getRandomColor)
+document.getElementById('color').addEventListener('click', getRandomColor)
 getRandomColor()
