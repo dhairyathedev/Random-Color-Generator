@@ -22,15 +22,24 @@
     <meta property="twitter:description" content="It's like rainbow 🏳️‍🌈">
     <meta property="twitter:image" content="">
 
+    <meta name="keywords" content="color, color picker, random color picker, color generator">
     <meta name="author" content="snowbit-coderboi">
 
 </head>
 <body>
     <div class="container">
         <center>
-            <div id="color" onclick="getRandomColor()"></div>
+            <div id="color"></div>
         </center>
     </div>
+    <script type="module">
+        import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+        import copyTextToClipboard from 'https://cdn.skypack.dev/copy-text-to-clipboard';
+        document.getElementById('color').addEventListener('click', () => {
+            copyTextToClipboard(document.getElementById('color').textContent)
+            confetti()
+        })
+    </script>
     <script src="index.js"></script>
 </body>
 </html>

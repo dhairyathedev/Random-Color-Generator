@@ -9,4 +9,5 @@ function getRandomColor() {
     document.getElementById('color').innerText = color
     document.body.style.backgroundColor = color
 }
+document.body.addEventListener('click', getRandomColor)
 getRandomColor()
