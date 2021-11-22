@@ -14,4 +14,11 @@ function getRandomColor() {
 
 }
 document.getElementById('color').addEventListener('click', getRandomColor)
+document.body.addEventListener('keyup', (event)=>{
+    if (event.keyCode === 13 || event.keyCode === 32) {
+        event.preventDefault();
+          getRandomColor()
+      }
+      
+})
 getRandomColor()
